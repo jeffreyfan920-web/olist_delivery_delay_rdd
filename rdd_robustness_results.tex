@@ -1,0 +1,33 @@
+
+\begingroup
+\centering
+\begin{tabular}{lccccc}
+   \tabularnewline \midrule \midrule
+   Dependent Variable: & \multicolumn{5}{c}{review\_score}\\
+                                       & BW [-5,5]       & BW [-7,7] (Main) & BW [-10,10]     & BW [-7,7] + Ctrls & Triangular Kernel \\   
+   Model:                              & (1)             & (2)              & (3)             & (4)               & (5)\\  
+   \midrule
+   \emph{Variables}\\
+   is\_delayed                         & 0.0399          & -0.1102$^{**}$   & -0.3186$^{***}$ & -0.1085$^{*}$     & -0.0141\\   
+                                       & (0.0680)        & (0.0555)         & (0.0470)        & (0.0554)          & (0.0596)\\   
+   delay\_days                         & -0.0224$^{***}$ & -0.0308$^{***}$  & -0.0280$^{***}$ & -0.0297$^{***}$   & -0.0289$^{***}$\\   
+                                       & (0.0081)        & (0.0045)         & (0.0028)        & (0.0045)          & (0.0050)\\   
+   is\_delayed $\times$ delay\_days    & -0.3733$^{***}$ & -0.2868$^{***}$  & -0.2237$^{***}$ & -0.2854$^{***}$   & -0.3289$^{***}$\\   
+                                       & (0.0223)        & (0.0121)         & (0.0079)        & (0.0121)          & (0.0147)\\   
+   \midrule
+   \emph{Fixed-effects}\\
+   main\_seller\_id                    & Yes             & Yes              & Yes             & Yes               & Yes\\  
+   product\_category\_name\_english    & Yes             & Yes              & Yes             & Yes               & Yes\\  
+   purchase\_ym                        & Yes             & Yes              & Yes             & Yes               & Yes\\  
+   \midrule
+   \emph{Fit statistics}\\
+   Observations                        & 11,868          & 20,849           & 35,220          & 20,847            & 20,849\\  
+   R$^2$                               & 0.27367         & 0.28658          & 0.26936         & 0.29130           & 0.26294\\  
+   Within R$^2$                        & 0.14083         & 0.18277          & 0.18888         & 0.18816           & 0.13717\\  
+   \midrule \midrule
+   \multicolumn{6}{l}{\emph{Clustered (main\_seller\_id) standard-errors in parentheses}}\\
+   \multicolumn{6}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+\end{tabular}
+\par\endgroup
+
+

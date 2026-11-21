@@ -1,0 +1,33 @@
+
+\begingroup
+\centering
+\begin{tabular}{lcccc}
+   \tabularnewline \midrule \midrule
+   Dependent Variables: & \multicolumn{2}{c}{review\_score} & has\_repeat\_order & repeat\_90d\\
+                                       & Score (No FE)   & Score (Full FE) & Repeat (Any)          & Repeat (90d) \\   
+   Model:                              & (1)             & (2)             & (3)                   & (4)\\  
+   \midrule
+   \emph{Variables}\\
+   is\_delayed                         & -0.1737$^{***}$ & -0.1102$^{**}$  & 0.0019                & 0.0035\\   
+                                       & (0.0537)        & (0.0555)        & (0.0061)              & (0.0065)\\   
+   delay\_days                         & -0.0274$^{***}$ & -0.0308$^{***}$ & -0.0003               & -0.0006\\   
+                                       & (0.0043)        & (0.0045)        & (0.0005)              & (0.0005)\\   
+   is\_delayed $\times$ delay\_days    & -0.2987$^{***}$ & -0.2868$^{***}$ & -0.0002               & 0.0007\\   
+                                       & (0.0118)        & (0.0121)        & (0.0015)              & (0.0015)\\   
+   \midrule
+   \emph{Fixed-effects}\\
+   main\_seller\_id                    &                 & Yes             & Yes                   & Yes\\  
+   product\_category\_name\_english    &                 & Yes             & Yes                   & Yes\\  
+   purchase\_ym                        &                 & Yes             & Yes                   & Yes\\  
+   \midrule
+   \emph{Fit statistics}\\
+   Observations                        & 21,438          & 20,849          & 21,032                & 15,657\\  
+   R$^2$                               & 0.19554         & 0.28658         & 0.08354               & 0.08675\\  
+   Within R$^2$                        &                 & 0.18277         & $2.54\times 10^{-5}$  & $8.85\times 10^{-5}$\\   
+   \midrule \midrule
+   \multicolumn{5}{l}{\emph{Clustered (main\_seller\_id) standard-errors in parentheses}}\\
+   \multicolumn{5}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+\end{tabular}
+\par\endgroup
+
+

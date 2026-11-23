@@ -6,6 +6,8 @@
 
 Using the **Olist Brazilian E-Commerce dataset** (96,470 delivered orders merged across 9 relational tables; 93,350 first-time orders), this project implements a **Sharp Regression Discontinuity Design (RDD)** around the promised delivery cutoff (`delay_days = 0`) to separate the causal effect of late delivery from confounding seller quality, product attributes, and seasonality.
 
+Data Resource： https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
+
 ## 2. Data Engineering & Relational Schema Integrity
 
 Multi-table e-commerce logs are prone to `1-to-Many` join explosions that silently double-count orders. Before econometric estimation, the Python ETL pipeline enforces strict `1-to-1` order-level granularity:
